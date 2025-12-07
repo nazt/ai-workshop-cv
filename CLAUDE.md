@@ -25,6 +25,18 @@ Read `LESSONS.md` first - especially GitHub Markdown section.
 - Be direct, no sugarcoating
 - Ask requirements upfront: Git? Issue? Language? Format?
 
+## Short Codes
+
+Quick commands - easy to type:
+
+- `pp` - Plan (create issue)
+- `xx` - Execute (from issue)
+- `cc` - Commit
+- `dd` - Diary (write session)
+- `ll` - List (status/files)
+- `aa` - Analyze
+- `ss` - Summary
+
 ## References
 
 - `LESSONS.md` - detailed lessons from past sessions
