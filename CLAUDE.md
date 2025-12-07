@@ -48,9 +48,18 @@ Quick commands - easy to type:
 - `ss` - Summary
 - `bb` - Build book (from logs)
 
+## Subagents
+
+### book-generator
+Located: `.claude/agents/book-generator.md`
+
+Transforms diary entries into narrative book chapters.
+- Invoke with `bb` or "use book-generator agent"
+- Tools: Read, Write, Glob, Bash
+- Model: sonnet
+
 ## References
 
 - `LESSONS.md` - detailed lessons from past sessions
 - `README.md` - project structure and overview
 - `diaries/RETROSPECTIVE.md` - sprint retrospective template
-- `prompts/book-generator.md` - book generation subagent instructions
