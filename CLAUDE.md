@@ -25,16 +25,7 @@ Read `LESSONS.md` first - especially GitHub Markdown section.
 - Be direct, no sugarcoating
 - Ask requirements upfront: Git? Issue? Language? Format?
 
-## Project Structure
-
-```
-cv/           → CV files
-diaries/      → AI session diaries + analysis
-examples/     → Other HTML examples
-LESSONS.md    → Lessons learned (for AI)
-```
-
 ## References
 
 - `LESSONS.md` - detailed lessons from past sessions
-- `diaries/` - past session context
+- `README.md` - project structure and overview
