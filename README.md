@@ -2,19 +2,26 @@
 
 Personal CV and portfolio projects built during AI workshop sessions.
 
-## Files
+## Structure
 
-| File | Description |
-|------|-------------|
-| `natcv1page.html` | One-page CV for Nat Weerawan - IoT Engineer & Community Builder |
-| `interactivechart.html` | Interactive data visualization chart |
+```
+.
+├── cv/
+│   ├── v1-full.html        # Full detailed CV
+│   └── v2-speaker.html     # Minimal speaker bio
+├── diaries/
+│   └── 2025-12-07.md       # AI session diary
+├── examples/
+│   └── interactivechart.html
+├── LESSONS.md              # Lessons learned (for AI)
+└── README.md
+```
 
 ## Preview
 
-Open any `.html` file directly in your browser:
-
 ```bash
-open natcv1page.html
+open cv/v1-full.html
+open cv/v2-speaker.html
 ```
 
 ## Tech Stack
