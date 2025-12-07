@@ -91,4 +91,30 @@ Long issues don't get read.
 
 ---
 
-*Last updated: 7 Dec 2025*
+---
+
+## Timestamps
+
+> Source: Session 7 Dec 2025
+
+### Rule
+Always include **time + timezone** when writing timestamps.
+
+### How to get Bangkok time
+```bash
+TZ='Asia/Bangkok' date '+%Y-%m-%d %H:%M:%S %Z'
+```
+
+### Good format
+```
+*Generated: 7 Dec 2025 · 15:43 (GMT+7 Bangkok)*
+```
+
+### Bad format
+```
+*Generated: 7 Dec 2025*  ← missing time!
+```
+
+---
+
+*Last updated: 7 Dec 2025 · 15:43 (GMT+7 Bangkok)*
