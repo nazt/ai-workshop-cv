@@ -1,93 +1,94 @@
 # Lessons Learned
 
-บันทึกสิ่งที่เรียนรู้จากการทำงาน ใช้เป็น reference สำหรับครั้งหน้า
+Reference for future AI sessions. Learn from past mistakes.
 
 ---
 
-## GitHub Markdown
+## GitHub Markdown Line Breaks
 
-> เรียนรู้จาก: AI Diary 7 ธันวาคม 2568
+> Source: Session 7 Dec 2025
 
-### ปัญหา
-GitHub markdown **ไม่ render line breaks** แบบ plain text
+### Problem
+GitHub markdown does NOT render line breaks from plain text.
 
-### วิธีที่ไม่ work
+### What doesn't work
 
 ```markdown
-❌ plain text ติดกัน
-**วันที่**: 7 ธันวาคม
-**เวลา**: 14:50
+❌ Plain text (renders as one line)
+**Date**: 7 Dec
+**Time**: 14:50
 
-❌ blockquote
-> บรรทัด 1
-> บรรทัด 2
+❌ Blockquote (renders as one line)
+> Line 1
+> Line 2
 ```
 
-### วิธีที่ work
+### What works
 
 ```markdown
-✅ Bullet list (แนะนำ)
-- **วันที่**: 7 ธันวาคม
-- **เวลา**: 14:50
+✅ Bullet list (RECOMMENDED)
+- **Date**: 7 Dec
+- **Time**: 14:50
 
 ✅ Table
 | Key | Value |
 |-----|-------|
-| วันที่ | 7 ธันวาคม |
+| Date | 7 Dec |
 
 ✅ HTML <br>
-**วันที่**: 7 ธันวาคม<br>
-**เวลา**: 14:50
+**Date**: 7 Dec<br>
+**Time**: 14:50
 ```
 
-### Rule of Thumb
-> ต้องการหลายบรรทัด → **ใช้ bullet list** เป็นตัวเลือกแรก
+### Rule
+> Need multiple lines in GitHub markdown? → **Use bullet list first**
 
 ---
 
-## GitHub Issue
+## GitHub Issues
 
-> เรียนรู้จาก: AI Diary 7 ธันวาคม 2568
+> Source: Session 7 Dec 2025
 
-### ปัญหา
-Issue ยาวเกินไป คนอ่านไม่หมด
+### Problem
+Long issues don't get read.
 
-### แนวทาง
-- เขียนสั้น กระชับ
-- ใช้ภาษาที่ user เข้าใจ (ถ้า user ใช้ไทย → เขียนไทย)
-- มี context พอ แต่ไม่ใช่ essay
-- ใช้ checklist สำหรับ track progress
+### Guidelines
+- Keep it short
+- Use user's language (Thai user → write Thai)
+- Enough context, but not an essay
+- Use checklist for tracking
 
-### โครงสร้างที่ดี
+### Good structure
+
 ```markdown
-## สรุป
-1-2 ประโยค
+## Summary
+1-2 sentences
 
-## เปลี่ยนแปลงหลัก
-- ข้อ 1
-- ข้อ 2
+## Changes
+- Item 1
+- Item 2
 
 ## Checklist
-- [ ] task 1
-- [ ] task 2
+- [ ] Task 1
+- [ ] Task 2
 ```
 
 ---
 
-## Working with AI
+## Working with Users
 
-> เรียนรู้จาก: AI Diary 7 ธันวาคม 2568
+> Source: Session 7 Dec 2025
 
-### Tips สำหรับ User
-- **บอก requirement ครบตั้งแต่แรก** - จะเร็วกว่าบอกทีละนิด
-- **Feedback ทันที** - บอกเลยว่าชอบ/ไม่ชอบ
-- **ตรงๆ ดีกว่าอ้อม** - AI รับ feedback ตรงๆ ได้
+### For AI
+- **Ask requirements upfront** - Git? Issues? What language?
+- **Know platform limitations** - e.g., GitHub markdown quirks
+- **Preview before commit** - if unsure
 
-### Tips สำหรับ AI
-- **ถามให้ครบก่อนทำ** - Git? Issue? ภาษาอะไร?
-- **รู้ข้อจำกัดของ platform** - เช่น GitHub markdown quirks
-- **Preview ก่อน commit** - ถ้าไม่แน่ใจ
+### What good users do (learn from Nat)
+- Give feedback immediately
+- Be direct - AI handles direct feedback well
+- Know what they want
 
 ---
 
-*Last updated: 7 ธันวาคม 2568*
+*Last updated: 7 Dec 2025*
