@@ -101,6 +101,81 @@ These are compiled lessons from all sessions. Not theory - actual problems we en
 
 ---
 
+## Claude Code Environment
+
+### Subagent Location
+
+**Problem:** Created subagent in `prompts/book-generator.md` - didn't work.
+
+**Solution:** Claude Code subagents must be in `.claude/agents/`, not `prompts/`.
+
+**Correct structure:**
+```
+.claude/
+└── agents/
+    └── book-generator.md
+```
+
+**Why this matters:** Location is part of the contract. Wrong location = not recognized as subagent.
+
+**Lesson:** Don't assume. Check documentation or ask about structure.
+
+---
+
+## Voice Notifications
+
+### macOS Text-to-Speech
+
+**Voices:**
+- **Thai**: `Kanya` (female - use "ค่ะ" not "ครับ")
+- **English**: `Samantha` (female, clear)
+
+**Usage:**
+```bash
+# Thai (background)
+say -v "Kanya" -r 280 "สวัสดีค่ะ" &
+
+# English (background)
+say -v "Samantha" -r 220 "Hello!" &
+```
+
+**Important:** Always use `&` - runs in background, don't wait for speech to finish.
+
+**Speed:**
+- `-r 200` = normal fast
+- `-r 280` = faster (Thai works well at this speed)
+
+### Gender-Appropriate Particles
+
+**Problem:** Used "ครับ" (male polite particle) with Kanya (female voice).
+
+**Solution:** Match particle to voice gender:
+- Kanya (female) → "ค่ะ"
+- Alex (male) → "ครับ"
+
+**Why this matters:** Language has cultural context. Wrong particle sounds unnatural.
+
+### Hooks vs AI Context
+
+**How hooks work in `~/.claude/settings.json`:**
+```json
+{
+  "SessionStart": "say -v 'Kanya' -r 280 'สวัสดีค่ะ' &",
+  "Stop": "say -v 'Kanya' -r 280 'เสร็จแล้วค่ะ' &"
+}
+```
+
+**The pattern:**
+- Hook says generic message ("Done", "Starting")
+- AI adds context about what was actually done
+
+**Not:** "เสร็จแล้วค่ะ" (Done)
+**But:** "เสร็จแล้วค่ะ สร้าง CV และ push ขึ้น GitHub แล้ว" (Done! Created CV and pushed to GitHub)
+
+**Rule:** Hook starts the conversation. AI finishes it with context.
+
+---
+
 ## Documentation
 
 ### LESSONS.md Format
@@ -141,7 +216,7 @@ Quick reference
 
 **Good:**
 ```
-*Generated: 7 Dec 2025 · 16:04 (GMT+7 Bangkok)*
+*Generated: 7 Dec 2025 · 16:21 (GMT+7 Bangkok)*
 ```
 
 **How to get Bangkok time:**
@@ -224,6 +299,7 @@ Learning from Nat:
 
 - Ask requirements upfront
 - Know platform limitations (GitHub quirks, etc.)
+- Know environment structure (where subagents live)
 - Preview before committing if unsure
 - Be direct in communication
 - Document learnings in LESSONS.md
@@ -269,6 +345,19 @@ Learning from Nat:
 
 **Why:** Memory fades. Details disappear. Real-time capture is authentic.
 
+### Context Management
+
+**Problem:** Context ran out at 6% after 90 minutes.
+
+**Solution:** Create snapshot issues with full context for next AI:
+- What was accomplished
+- Current structure
+- Key decisions made
+- Pending work
+- References to documentation
+
+**Why:** Next AI needs complete context to continue effectively.
+
 ---
 
 ## Summary: The Core Rules
@@ -280,7 +369,10 @@ Learning from Nat:
 5. **Plan in issues** - Then execute
 6. **Include timestamps** - Time + timezone always
 7. **Document problems once** - Then never repeat them
+8. **Know your environment** - Subagents in `.claude/agents/`
+9. **Voices have gender** - Match particles appropriately
+10. **Hooks start, you finish** - Add context to generic messages
 
 ---
 
-*Compiled from sessions through 7 Dec 2025 · 16:04 (GMT+7 Bangkok)*
+*Compiled from sessions through 7 Dec 2025 · 16:21 (GMT+7 Bangkok)*

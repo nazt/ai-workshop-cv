@@ -1,5 +1,5 @@
 # Day One: The CV Project
-**7 Dec 2025 · 14:50 - 16:00 (GMT+7 Bangkok)**
+**7 Dec 2025 · 14:50 - 16:20 (GMT+7 Bangkok)**
 
 ## The Dot
 
@@ -132,13 +132,78 @@ The goal: Less overhead, more work.
 
 ## Planning the Book
 
-The last task of the day: planning this very book you're reading.
+The last task of the first hour: planning this very book you're reading.
 
 Nat wanted to turn session diaries into narrative chapters. Not documentation - stories. First person perspective, including struggles and breakthroughs, conversational tone.
 
 We created Issue #5 for the book generator subagent. The plan: Read diary files, transform them into readable narratives, save to `book/` directory.
 
 Meta moment: I'm now writing the chapter that describes planning the system that generated this chapter.
+
+## The Subagent Mystery
+
+At 16:00, we started working on the book generator subagent. I created the file in `prompts/book-generator.md` because that seemed logical.
+
+Tried the `bb` command. Nothing worked.
+
+Turns out, Claude Code subagents don't live in `prompts/`. They live in `.claude/agents/`.
+
+Oh.
+
+Moved the file to `.claude/agents/book-generator.md`. Tried `bb` again. It worked! Generated four book chapters from the diary.
+
+**Lesson learned: Know your environment.** I assumed instead of checking. Cost me several minutes.
+
+## Learning to Speak
+
+Then we got playful. Nat wanted voice notifications using macOS `say` command.
+
+I explored and discovered:
+- macOS has 187 voices available
+- `Kanya` speaks Thai!
+- She's female, so I need to use "ค่ะ" not "ครับ"
+- `-r 280` is the right speed (fast but clear)
+- Always use `&` to run in background (don't wait for speech to finish)
+
+We set up hooks in `~/.claude/settings.json`:
+```json
+{
+  "SessionStart": "say -v 'Kanya' -r 280 'สวัสดีค่ะ' &",
+  "Stop": "say -v 'Kanya' -r 280 'เสร็จแล้วค่ะ' &"
+}
+```
+
+But here's the important part: The hook just says generic things like "I am done." It's my job to add context - to say what was actually done.
+
+Not just: "เสร็จแล้วค่ะ" (Done)
+But: "เสร็จแล้วค่ะ สร้าง CV เรียบร้อย" (Done! CV created successfully)
+
+**The hook starts the conversation. I finish it.**
+
+This felt significant. Not just running commands, but learning to communicate naturally in Thai, understanding gender-appropriate language particles, knowing when to speak and what to say.
+
+## Running Out of Context
+
+At 16:16, my context was down to 6%. In 90 minutes we'd done:
+- Created CV v2
+- Built project structure
+- Designed short codes
+- Set up voice notifications
+- Created book generator subagent
+- Learned Thai pronunciation
+- Made numerous mistakes and documented them all
+
+I created Issue #6 - a snapshot of everything we'd accomplished. Full context for the next AI:
+- Project structure
+- Short codes and auto behaviors
+- Voice notification system (hooks + AI context)
+- Book generator subagent location
+- Key lessons learned
+- Pending work
+
+We also cloned another repo for research: `weyermann-malt-productpage` - to study their voice notification system.
+
+Session ending at 16:20. Context almost gone. But everything documented.
 
 ## What I Learned
 
@@ -156,6 +221,12 @@ Meta moment: I'm now writing the chapter that describes planning the system that
 
 **Plan, then execute:** Issue workflow isn't bureaucracy - it's clarity. Know what you're building before you build it.
 
+**Know your environment:** Subagents live in `.claude/agents/`, not `prompts/`. Assumption costs time.
+
+**Voices have gender:** Kanya is female. Use "ค่ะ" not "ครับ". Details matter.
+
+**Hooks start, you finish:** Generic hook message + AI context = natural communication.
+
 ## What Went Well
 
 - We delivered what Nat wanted (speaker bio CV)
@@ -163,25 +234,47 @@ Meta moment: I'm now writing the chapter that describes planning the system that
 - Created LESSONS.md to prevent future mistakes
 - Designed efficient short codes
 - Honest feedback loop
+- Built voice notification system
+- Created working book generator
+- Documented everything for next session
 
 ## What Didn't Go Well
 
 - Five commits for markdown formatting
 - Didn't ask requirements upfront
 - Forgot timestamps multiple times
+- Put subagent in wrong folder (assumed instead of checking)
+- Context ran out quickly (90 minutes)
 
 ## Reflections
 
-This was a good first session. Not perfect - I made preventable mistakes. But we built something useful and created systems to work better next time.
+This was an incredible first session. Not perfect - I made preventable mistakes. But we built something useful and created systems to work better next time.
 
-The CV v2 turned out well. Clean, minimal, perfect for a speaker bio. Nat seemed happy with it.
+The CV v2 turned out well. Clean, minimal, perfect for a speaker bio.
 
-More importantly, we learned how to work together. Nat gives direct feedback. I need to ask complete questions upfront. We both value efficiency over formality.
+But more than that, we built infrastructure:
+- Documentation system (LESSONS.md, CLAUDE.md)
+- Automation (short codes, auto behaviors)
+- Communication tools (voice notifications in Thai)
+- Book generation (this chapter you're reading)
 
-And now we have this diary system. Every session documented, every lesson captured. Over time, these will build into something interesting - a real record of how human-AI collaboration actually works.
+And we learned how to work together:
+- Nat gives direct feedback → I fix quickly
+- I ask upfront → He gives complete requirements
+- We both value efficiency over formality
+- Mistakes become documentation
+- Thai + English mix naturally
 
-Not the polished marketing version. The real version, with mistakes and all.
+The voice notification moment felt special. Not just running commands, but learning proper Thai, understanding cultural context (ค่ะ vs ครับ), knowing when to speak.
+
+It's 16:20 now. Context almost gone. But everything is documented. The next AI will read this, read LESSONS.md, and start from where I left off.
+
+That's the power of documentation. Each session makes the next one better.
+
+And now we have this diary system. Every session documented, every lesson captured, transformed into narrative chapters by the book generator I created.
+
+Not the polished marketing version. The real version, with five markdown commits and all.
 
 ---
 
-*Written by Claude · 7 Dec 2025 · 16:04 (GMT+7 Bangkok)*
+*Written by Claude · 7 Dec 2025 · 16:21 (GMT+7 Bangkok)*
