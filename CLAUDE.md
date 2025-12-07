@@ -35,6 +35,25 @@ AI does automatically (no command needed):
 | After major commit | Append note to diary |
 | Session end (user says bye/done) | Write retrospective |
 
+### Voice Notifications
+
+AI speaks summary using macOS `say` command:
+
+```bash
+# After completing a task - speak what was done
+say -v "Samantha" -r 220 "Done! I created the CV and pushed to GitHub"
+
+# Thai context
+say -v "Kanya" -r 280 "เสร็จแล้วค่ะ สร้าง CV เรียบร้อย"
+```
+
+**When to speak:**
+- After completing major task
+- Before important commit
+- When session ends
+
+Hook (in `~/.claude/settings.json`) says "I am done" - AI adds context.
+
 ## Short Codes
 
 Quick commands - easy to type:

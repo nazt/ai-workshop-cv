@@ -117,4 +117,31 @@ TZ='Asia/Bangkok' date '+%Y-%m-%d %H:%M:%S %Z'
 
 ---
 
-*Last updated: 7 Dec 2025 · 15:43 (GMT+7 Bangkok)*
+---
+
+## macOS Text-to-Speech
+
+> Source: Session 7 Dec 2025
+
+### Voices
+- **Thai**: `Kanya` (ผู้หญิง, ใช้ "ค่ะ" ไม่ใช่ "ครับ")
+- **English**: `Samantha`
+
+### Usage
+```bash
+# Thai (background)
+say -v "Kanya" -r 280 "สวัสดีค่ะ" &
+
+# English (background)
+say -v "Samantha" -r 220 "Hello!" &
+```
+
+**Always use `&`** - runs in background, don't wait for speech to finish.
+
+### Speed
+- `-r 200` = normal fast
+- `-r 280` = faster
+
+---
+
+*Last updated: 7 Dec 2025 · 16:15 (GMT+7 Bangkok)*
