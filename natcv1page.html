@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Nat Weerawan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: #f8fafc;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 40px auto;
+            background: white;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+        }
+
+        @media print {
+            body {
+                background: none;
+                margin: 0;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        /* Custom scrollbar for web view */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-100 text-slate-800 antialiased selection:bg-emerald-100 selection:text-emerald-900">
+
+    <div class="page mx-auto relative bg-white">
+        <!-- Header Section with Pattern -->
+        <header
+            class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white p-10 pb-8 relative overflow-hidden">
+            <!-- Decorative circle -->
+            <div
+                class="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none">
+            </div>
+
+            <div class="relative z-10 flex justify-between items-start">
+                <div>
+                    <h1 class="text-5xl font-bold mb-2 tracking-tight text-white">ณัฐ วีระวรรณ์</h1>
+                    <h2 class="text-lg text-emerald-400 font-semibold tracking-wide uppercase flex items-center gap-3">
+                        <span class="w-8 h-0.5 bg-emerald-400 inline-block rounded-full"></span>
+                        Socio-technical Architect & IoT Engineer
+                    </h2>
+                    <p class="text-slate-300 text-sm mt-5 max-w-xl leading-relaxed opacity-90 font-light">
+                        นักพัฒนาระบบ Full-stack และวิศวกรข้อมูล ผู้เชี่ยวชาญด้าน IoT และเทคโนโลยี Open Source <br>
+                        ผู้บุกเบิก <strong>Chiang Mai Maker Club</strong> และนักวิจัยเบื้องหลัง
+                        <strong>"DustBoy"</strong> <br>
+                        มุ่งมั่นใช้นวัตกรรมขับเคลื่อนสังคมและแก้ปัญหาสิ่งแวดล้อม
+                    </p>
+                </div>
+                <!-- Contact Info -->
+                <div class="text-right space-y-3 mt-2 min-w-[220px]">
+                    <div
+                        class="group flex items-center justify-end gap-3 text-slate-300 hover:text-white transition-colors">
+                        <span class="text-sm font-medium">Chiang Mai, Thailand</span>
+                        <div
+                            class="bg-white/5 p-2 rounded-lg border border-white/10 group-hover:border-emerald-400/50 group-hover:bg-emerald-400/10 transition-all backdrop-blur-sm">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-emerald-400"></i>
+                        </div>
+                    </div>
+                    <div
+                        class="group flex items-center justify-end gap-3 text-slate-300 hover:text-white transition-colors">
+                        <a href="mailto:nat.w@cmu.ac.th" class="text-sm font-medium">nat.w@cmu.ac.th</a>
+                        <div
+                            class="bg-white/5 p-2 rounded-lg border border-white/10 group-hover:border-emerald-400/50 group-hover:bg-emerald-400/10 transition-all backdrop-blur-sm">
+                            <i data-lucide="mail" class="w-4 h-4 text-emerald-400"></i>
+                        </div>
+                    </div>
+                    <div
+                        class="group flex items-center justify-end gap-3 text-slate-300 hover:text-white transition-colors">
+                        <a href="https://github.com/natweerawan" class="text-sm font-medium">github.com/natweerawan</a>
+                        <div
+                            class="bg-white/5 p-2 rounded-lg border border-white/10 group-hover:border-emerald-400/50 group-hover:bg-emerald-400/10 transition-all backdrop-blur-sm">
+                            <i data-lucide="github" class="w-4 h-4 text-emerald-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="p-10 pt-8 flex-grow flex flex-col justify-between">
+
+            <!-- Technical Proficiency (Cards Layout) -->
+            <section class="mb-8">
+                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                    <i data-lucide="cpu" class="w-4 h-4 text-emerald-500"></i> Technical Proficiency
+                </h3>
+                <div class="grid grid-cols-4 gap-4">
+                    <!-- Languages -->
+                    <div
+                        class="p-4 bg-slate-50/80 rounded-xl border border-slate-100 hover:border-emerald-200 hover:bg-emerald-50/30 transition-all group">
+                        <span
+                            class="block font-bold text-slate-700 text-sm mb-3 group-hover:text-emerald-700">Languages</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 bg-white border border-slate-200 rounded text-[10px] uppercase font-bold text-slate-600 shadow-sm">Python
+                                (Expert)</span>
+                            <span
+                                class="px-2 py-1 bg-white border border-slate-200 rounded text-[10px] uppercase font-bold text-slate-600 shadow-sm">C/C++</span>
+                            <span
+                                class="px-2 py-1 bg-white border border-slate-200 rounded text-[10px] uppercase font-bold text-slate-600 shadow-sm">JS</span>
+                        </div>
+                    </div>
+                    <!-- Hardware -->
+                    <div
+                        class="p-4 bg-slate-50/80 rounded-xl border border-slate-100 hover:border-emerald-200 hover:bg-emerald-50/30 transition-all group">
+                        <span
+                            class="block font-bold text-slate-700 text-sm mb-3 group-hover:text-emerald-700">Hardware</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 bg-white border border-slate-200 rounded text-[10px] uppercase font-bold text-slate-600 shadow-sm">ESP32</span>
+                            <span
+                                class="px-2 py-1 bg-white border border-slate-200 rounded text-[10px] uppercase font-bold text-slate-600 shadow-sm">KidBright</span>
+                            <span
+                                class="px-2 py-1 bg-white border border-slate-200 rounded text-[10px] uppercase font-bold text-slate-600 shadow-sm">Sensors</span>
+                        </div>
+                    </div>
+                    <!-- Backend -->
+                    <div
+                        class="p-4 bg-slate-50/80 rounded-xl border border-slate-100 hover:border-emerald-200 hover:bg-emerald-50/30 transition-all group">
+                        <span
+                            class="block font-bold text-slate-700 text-sm mb-3 group-hover:text-emerald-700">Backend</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 bg-white border border-slate-200 rounded text-[10px] uppercase font-bold text-slate-600 shadow-sm">Flask</span>
+                            <span
+                                class="px-2 py-1 bg-white border border-slate-200 rounded text-[10px] uppercase font-bold text-slate-600 shadow-sm">MQTT</span>
+                            <span
+                                class="px-2 py-1 bg-white border border-slate-200 rounded text-[10px] uppercase font-bold text-slate-600 shadow-sm">ETL</span>
+                        </div>
+                    </div>
+                    <!-- DevOps -->
+                    <div
+                        class="p-4 bg-slate-50/80 rounded-xl border border-slate-100 hover:border-emerald-200 hover:bg-emerald-50/30 transition-all group">
+                        <span
+                            class="block font-bold text-slate-700 text-sm mb-3 group-hover:text-emerald-700">DevOps</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 bg-white border border-slate-200 rounded text-[10px] uppercase font-bold text-slate-600 shadow-sm">Docker</span>
+                            <span
+                                class="px-2 py-1 bg-white border border-slate-200 rounded text-[10px] uppercase font-bold text-slate-600 shadow-sm">Git</span>
+                            <span
+                                class="px-2 py-1 bg-white border border-slate-200 rounded text-[10px] uppercase font-bold text-slate-600 shadow-sm">Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section with Timeline -->
+            <section class="mb-8">
+                <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+                    <span class="bg-emerald-100 p-2 rounded-lg text-emerald-600"><i data-lucide="briefcase"
+                            class="w-5 h-5"></i></span>
+                    ประสบการณ์ทำงาน & วิจัย
+                </h3>
+
+                <div class="relative pl-8 border-l-[3px] border-slate-100 space-y-10 ml-3">
+                    <!-- Job 1 -->
+                    <div class="relative group">
+                        <!-- Timeline Dot -->
+                        <div
+                            class="absolute -left-[45px] top-1.5 w-6 h-6 bg-emerald-500 rounded-full border-[4px] border-white shadow-md group-hover:scale-110 group-hover:ring-4 ring-emerald-100 transition-all">
+                        </div>
+
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h4
+                                    class="font-bold text-[17px] text-slate-800 group-hover:text-emerald-700 transition-colors">
+                                    IoT Researcher & Data Engineer</h4>
+                                <div class="text-emerald-600 font-medium text-sm">ศูนย์ข้อมูลการเปลี่ยนแปลงสภาพภูมิอากาศ
+                                    (CCDC), มหาวิทยาลัยเชียงใหม่</div>
+                            </div>
+                            <span
+                                class="text-xs font-bold text-slate-500 bg-slate-50 px-3 py-1.5 rounded-full border border-slate-100">201x
+                                - ปัจจุบัน</span>
+                        </div>
+                        <ul class="space-y-2 mt-3">
+                            <li class="flex gap-3 text-sm text-slate-600 items-start">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                                <span><strong class="text-slate-700">Project DustBoy:</strong> พัฒนา Low-Cost Sensor
+                                    วัดฝุ่น PM2.5 แม่นยำสูง ติดตั้งหลายพันจุดทั่วไทย และออกแบบ Data Pipeline รองรับ High
+                                    Concurrency</span>
+                            </li>
+                            <li class="flex gap-3 text-sm text-slate-600 items-start">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                                <span><strong class="text-slate-700">Calibration:</strong> พัฒนาอัลกอริทึม Bias
+                                    Correction (Python/Jupyter) และระบบสื่อสารผ่าน WiFi/ELTRES (Satellite IoT)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="relative group">
+                        <!-- Timeline Dot -->
+                        <div
+                            class="absolute -left-[45px] top-1.5 w-6 h-6 bg-slate-200 border-[4px] border-white rounded-full shadow-md group-hover:bg-emerald-400 group-hover:ring-4 ring-emerald-100 transition-all">
+                        </div>
+
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h4
+                                    class="font-bold text-[17px] text-slate-800 group-hover:text-emerald-700 transition-colors">
+                                    Co-founder & Community Architect</h4>
+                                <div class="text-emerald-600 font-medium text-sm">Chiang Mai Maker Club (CMMC)</div>
+                            </div>
+                            <span
+                                class="text-xs font-bold text-slate-500 bg-slate-50 px-3 py-1.5 rounded-full border border-slate-100">201x
+                                - ปัจจุบัน</span>
+                        </div>
+                        <ul class="space-y-2 mt-3">
+                            <li class="flex gap-3 text-sm text-slate-600 items-start">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                                <span><strong class="text-slate-700">Ecosystem Builder:</strong> สร้างระบบนิเวศ "Open
+                                    Source" บ่มเพาะ Tech Talent และ Startup</span>
+                            </li>
+                            <li class="flex gap-3 text-sm text-slate-600 items-start">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                                <span><strong class="text-slate-700">Cross-disciplinary:</strong> เชื่อมโยง Programmer,
+                                    Maker, และ Local Sectors ผ่าน Hackathon & Workshops</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bottom Section -->
+            <div class="grid grid-cols-2 gap-10 mt-6 pt-8 border-t border-dashed border-slate-200">
+
+                <!-- Research & Works -->
+                <div class="space-y-6">
+                    <section>
+                        <h3 class="text-base font-bold text-slate-800 mb-4 flex items-center gap-2">
+                            <i data-lucide="book-open" class="w-4 h-4 text-emerald-500"></i> งานวิจัยและผลงานเด่น
+                        </h3>
+                        <div class="space-y-3">
+                            <div
+                                class="group bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-emerald-200 transition-all cursor-default relative overflow-hidden">
+                                <div class="absolute top-0 left-0 w-1 h-full bg-emerald-400"></div>
+                                <h5
+                                    class="font-bold text-slate-800 text-sm group-hover:text-emerald-700 transition-colors">
+                                    Energy Efficiency Research (2025)</h5>
+                                <p class="text-xs text-slate-500 mt-1 leading-relaxed">วิจัย "Optimizing Residential
+                                    Energy Usage" พบว่า Scheduling ประหยัดกว่า Real-time control</p>
+                            </div>
+                            <div
+                                class="group bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-emerald-200 transition-all cursor-default relative overflow-hidden">
+                                <div class="absolute top-0 left-0 w-1 h-full bg-emerald-400"></div>
+                                <h5
+                                    class="font-bold text-slate-800 text-sm group-hover:text-emerald-700 transition-colors">
+                                    Open Source Libraries</h5>
+                                <p class="text-xs text-slate-500 mt-1 leading-relaxed">ผู้พัฒนา
+                                    <strong>WiFiConnector</strong> และ <strong>ESP8266 SmartConfig</strong>
+                                    ช่วยลดความซับซ้อน IoT Connectivity</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 class="text-base font-bold text-slate-800 mb-4 flex items-center gap-2">
+                            <i data-lucide="mic-2" class="w-4 h-4 text-emerald-500"></i> Keynote Speaker
+                        </h3>
+                        <ul class="text-sm text-slate-600 space-y-3 pl-2">
+                            <li class="flex gap-3">
+                                <div class="w-1.5 h-1.5 bg-emerald-400 rounded-full mt-2 shrink-0"></div>
+                                <span><strong class="text-slate-800">PyCon Thailand:</strong> Building End-to-End IoT
+                                    with Python</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <div class="w-1.5 h-1.5 bg-emerald-400 rounded-full mt-2 shrink-0"></div>
+                                <span><strong class="text-slate-800">Techsauce Global:</strong> Smart City & IoT
+                                    Implementation</span>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- Expertise & Languages -->
+                <div class="space-y-6">
+                    <section>
+                        <h3 class="text-base font-bold text-slate-800 mb-4 flex items-center gap-2">
+                            <i data-lucide="star" class="w-4 h-4 text-emerald-500"></i> ความเชี่ยวชาญ (Expertise)
+                        </h3>
+                        <div class="grid grid-cols-1 gap-3">
+                            <div
+                                class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-100 rounded-lg hover:bg-emerald-50/20 transition-colors">
+                                <div
+                                    class="bg-white p-1.5 rounded-md shadow-sm text-emerald-600 border border-emerald-100">
+                                    <i data-lucide="server" class="w-4 h-4"></i></div>
+                                <span class="text-sm font-medium text-slate-700">End-to-End IoT Systems</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-100 rounded-lg hover:bg-emerald-50/20 transition-colors">
+                                <div
+                                    class="bg-white p-1.5 rounded-md shadow-sm text-emerald-600 border border-emerald-100">
+                                    <i data-lucide="users" class="w-4 h-4"></i></div>
+                                <span class="text-sm font-medium text-slate-700">Community Construction</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-100 rounded-lg hover:bg-emerald-50/20 transition-colors">
+                                <div
+                                    class="bg-white p-1.5 rounded-md shadow-sm text-emerald-600 border border-emerald-100">
+                                    <i data-lucide="leaf" class="w-4 h-4"></i></div>
+                                <span class="text-sm font-medium text-slate-700">Environmental Data Science</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 class="text-base font-bold text-slate-800 mb-4 flex items-center gap-2">
+                            <i data-lucide="message-square" class="w-4 h-4 text-emerald-500"></i> ภาษา (Languages)
+                        </h3>
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-1 p-3 bg-gradient-to-br from-white to-emerald-50/30 rounded-xl border border-slate-200 text-center shadow-sm">
+                                <span
+                                    class="block text-[10px] font-bold text-emerald-600 uppercase tracking-wider mb-1">Thai</span>
+                                <span class="font-bold text-slate-700 text-sm">Native</span>
+                            </div>
+                            <div
+                                class="flex-1 p-3 bg-gradient-to-br from-white to-slate-50/50 rounded-xl border border-slate-200 text-center shadow-sm">
+                                <span
+                                    class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">English</span>
+                                <span class="font-bold text-slate-700 text-sm">Professional</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Print Button Floating -->
+    <div class="max-w-screen-lg mx-auto text-center mt-8 mb-10 no-print">
+        <button onclick="window.print()"
+            class="group bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 px-6 rounded-full inline-flex items-center gap-3 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
+            <i data-lucide="printer" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+            <span>Print Resume / Save as PDF</span>
+        </button>
+        <p class="text-sm text-gray-500 mt-4 font-medium">✨ Pro Tip: เลือก "Save as PDF" ในหน้า Print เพื่อบันทึกไฟล์
+        </p>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
