@@ -25,6 +25,16 @@ Read `LESSONS.md` first - especially GitHub Markdown section.
 - Be direct, no sugarcoating
 - Ask requirements upfront: Git? Issue? Language? Format?
 
+## Auto Behaviors
+
+AI does automatically (no command needed):
+
+| When | AI does |
+|------|---------|
+| Session start | Create diary entry in `diaries/` |
+| After major commit | Append note to diary |
+| Session end (user says bye/done) | Write retrospective |
+
 ## Short Codes
 
 Quick commands - easy to type:
@@ -32,10 +42,11 @@ Quick commands - easy to type:
 - `pp` - Plan (create issue)
 - `xx` - Execute (from issue)
 - `cc` - Commit
-- `dd` - Diary (write session)
+- `dd` - Diary (write/append)
 - `ll` - List (status/files)
 - `aa` - Analyze
 - `ss` - Summary
+- `bb` - Build book (from logs)
 
 ## References
 
