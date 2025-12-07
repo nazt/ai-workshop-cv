@@ -53,3 +53,4 @@ Quick commands - easy to type:
 - `LESSONS.md` - detailed lessons from past sessions
 - `README.md` - project structure and overview
 - `diaries/RETROSPECTIVE.md` - sprint retrospective template
+- `prompts/book-generator.md` - book generation subagent instructions
